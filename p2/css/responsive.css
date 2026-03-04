@@ -81,7 +81,8 @@
 
 @media only screen and (max-width: 767px) {
 .container {
-    width: 450px;
+    width: 95%;
+    margin: 0 auto;
 }
 
 .hero-content h1 {
@@ -122,7 +123,8 @@
 
 @media only screen and (max-width: 479px) {
 .container {
-    width: 300px;
+    width: 95%;
+    margin: 0 auto;
 }
 .logo a {
   width: 125px !important;
@@ -153,5 +155,92 @@
   margin-top: 20px;
 }
 
+}
+
+/* Mobile Optimization: max-width 768px */
+
+@media only screen and (max-width: 768px) {
+/* Flexbox stacking */
+.header-top {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* Ensure all images scale properly */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Container and section widths */
+.container,
+.section,
+.row,
+.col {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0 15px;
+}
+
+/* Grid and column stacking */
+[class*="col-"],
+[class*="col-md-"],
+[class*="col-sm-"],
+.column,
+.sidebar {
+  width: 100% !important;
+  margin-bottom: 20px;
+}
+
+/* Remove unnecessary horizontal spacing */
+body {
+  overflow-x: hidden;
+}
+
+/* Ensure no horizontal scrolling */
+html {
+  overflow-x: hidden;
+}
+
+/* Button and link sizing */
+.btn {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+/* Navigation and menu */
+.nav,
+.navbar,
+.menu {
+  width: 100%;
+  flex-direction: column;
+}
+
+/* Content and text spacing */
+p,
+label,
+span {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Prevent fixed positioning issues on mobile */
+table {
+  width: 100%;
+  overflow-x: auto;
+  display: block;
+}
+
+/* Modal and popup sizing */
+.modal,
+.popup,
+.dialog {
+  width: 95% !important;
+  margin: 0 auto;
+}
 
 }
